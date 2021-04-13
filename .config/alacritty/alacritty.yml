@@ -1,5 +1,8 @@
 # Configuration for Alacritty, the GPU enhanced terminal emulator.
 
+font:
+  size: 8
+
 colors:
   primary:
     background: '#2e3440'
