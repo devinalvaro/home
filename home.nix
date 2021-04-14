@@ -25,6 +25,11 @@
     userEmail = "devin.alvaro@gmail.com";
   };
 
+  home.file.".local/bin" = {
+    source = ./bin;
+    recursive = true;
+  };
+
   xdg.configFile."alacritty" = {
     source = ./alacritty;
     recursive = true;
