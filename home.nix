@@ -18,4 +18,10 @@
   # paths it should manage.
   home.username = "devin";
   home.homeDirectory = "/home/devin";
+
+  programs.git = {
+    enable = true;
+    userName  = "Devin Alvaro";
+    userEmail = "devin.alvaro@gmail.com";
+  };
 }
