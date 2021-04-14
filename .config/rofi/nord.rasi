@@ -27,7 +27,7 @@
 }
 
 window {
-  border: 0.2em;
+  border: 0.25em;
   width: 25em;
 }
 
