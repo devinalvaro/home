@@ -40,7 +40,11 @@
     }
   ];
 
-  # Enable LeftWM.
+  # Enable auto-login.
+  services.xserver.displayManager.autoLogin.enable = true;
+  services.xserver.displayManager.autoLogin.user = "devin";
+
+  # Enable SpectrWM.
   services.xserver.windowManager.spectrwm.enable = true;
 
   # Enable sound.
