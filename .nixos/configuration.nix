@@ -83,6 +83,7 @@
     starship
     wget
     xsecurelock
+    zathura
   ];
 
   # Define user accounts.
