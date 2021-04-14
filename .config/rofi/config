@@ -1,2 +1,3 @@
+rofi.modi: window,run
 rofi.terminal: alacritty
 rofi.theme: nord
