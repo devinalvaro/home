@@ -33,6 +33,12 @@
 
   # Enable X11.
   services.xserver.enable = true;
+  services.xserver.resolutions = [
+    {
+      x = 1600;
+      y = 900;
+    }
+  ];
 
   # Enable LeftWM.
   services.xserver.windowManager.spectrwm.enable = true;
