@@ -35,6 +35,10 @@
     recursive = true;
   };
 
+  home.file.".background-image" = {
+    source = ./backgrounds/nord-underwater.png;
+  };
+
   xdg.configFile."alacritty" = {
     source = ./alacritty;
     recursive = true;
