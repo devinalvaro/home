@@ -40,8 +40,12 @@ prompt {
 }
 
 prompt, entry {
-  text-color: @frost-2;
+  text-color: @border-color;
   padding: 0.75em;
+}
+
+case-indicator {
+  text-color: @background-color;
 }
 
 element {
