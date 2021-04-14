@@ -24,4 +24,29 @@
     userName  = "Devin Alvaro";
     userEmail = "devin.alvaro@gmail.com";
   };
+
+  xdg.configFile."alacritty" = {
+    source = ./alacritty;
+    recursive = true;
+  };
+  xdg.configFile."bat" = {
+    source = ./bat;
+    recursive = true;
+  };
+  xdg.configFile."fish" = {
+    source = ./fish;
+    recursive = true;
+  };
+  xdg.configFile."rofi" = {
+    source = ./rofi;
+    recursive = true;
+  };
+  xdg.configFile."spectrwm" = {
+    source = ./spectrwm;
+    recursive = true;
+  };
+  xdg.configFile."zathura" = {
+    source = ./zathura;
+    recursive = true;
+  };
 }
