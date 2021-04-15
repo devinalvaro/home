@@ -57,7 +57,7 @@
   ];
 
   home.file.".local/bin" = {
-    source = ./bin;
+    source = ./scripts;
     recursive = true;
   };
   home.file.".doom.d" = {
