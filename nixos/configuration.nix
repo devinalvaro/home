@@ -57,34 +57,11 @@
   # Enable light.
   programs.light.enable = true;
 
-  # Enable fish.
-  programs.fish.enable = true;
-
   # Set fonts.
   fonts.fonts = with pkgs; [ fira-code ];
   fonts.fontconfig.defaultFonts = {
     monospace = [ "Fira Code" ];
   };
-
-  # List packages installed in system profile.
-  environment.systemPackages = with pkgs; [
-    alacritty
-    bat
-    emacs
-    exa
-    fd
-    firefox
-    git
-    gitAndTools.delta
-    neovim
-    ripgrep
-    rofi
-    sd
-    starship
-    wget
-    xsecurelock
-    zathura
-  ];
 
   # Define user accounts.
   users.mutableUsers = false;

@@ -21,20 +21,49 @@
 
   programs.git = {
     enable = true;
-    userName  = "Devin Alvaro";
+    userName = "Devin Alvaro";
     userEmail = "devin.alvaro@gmail.com";
   };
+
+  home.packages = with pkgs; [
+    # Desktop
+    rofi
+    xsecurelock
+
+    # Development
+    emacs
+    neovim
+
+    # Document
+    zathura
+
+    # Shell
+    fish
+    starship
+
+    # Terminal
+    alacritty
+
+    # Utilities
+    bat
+    exa
+    fd
+    gitAndTools.delta
+    ripgrep
+    sd
+
+    # Web
+    firefox
+  ];
 
   home.file.".local/bin" = {
     source = ./bin;
     recursive = true;
   };
-
   home.file.".doom.d" = {
     source = ./doom;
     recursive = true;
   };
-
   home.file.".background-image" = {
     source = ./backgrounds/nord-underwater.png;
   };
