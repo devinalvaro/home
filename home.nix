@@ -25,6 +25,14 @@
     userEmail = "devin.alvaro@gmail.com";
   };
 
+  programs.firefox = {
+    enable = true;
+    profiles."default".settings = {
+      "extensions.activeThemeID" = "firefox-compact-dark@mozilla.org";
+      "ui.systemUsesDarkTheme" = 1;
+    };
+  };
+
   home.packages = with pkgs; [
     # Desktop
     rofi
