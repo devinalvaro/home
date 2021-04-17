@@ -28,6 +28,7 @@
   home.packages = with pkgs; [
     # Desktop:
     rofi
+    xbindkeys
     xsecurelock
     # Development:
     neovim
