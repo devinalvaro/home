@@ -19,51 +19,37 @@
   home.username = "devin";
   home.homeDirectory = "/home/devin";
 
-  programs.git = {
-    enable = true;
-    userName = "Devin Alvaro";
-    userEmail = "devin.alvaro@gmail.com";
-  };
+  # Enable programs.
+  programs.git = import ./git;
+  programs.firefox = import ./firefox;
 
-  programs.firefox = {
-    enable = true;
-    profiles."default".settings = {
-      "extensions.activeThemeID" = "firefox-compact-dark@mozilla.org";
-      "ui.systemUsesDarkTheme" = 1;
-    };
-  };
-
+  # Install packages.
   home.packages = with pkgs; [
-    # Desktop
+    # Desktop:
     rofi
     xsecurelock
-
-    # Development
+    # Development:
     emacs
     neovim
-
-    # Document
+    # Document:
     zathura
-
-    # Shell
+    # Shell:
     fish
     starship
-
-    # Terminal
+    # Terminal:
     alacritty
-
-    # Utilities
+    # Utilities:
     bat
     exa
     fd
     gitAndTools.delta
     ripgrep
     sd
-
-    # Web
+    # Web:
     firefox
   ];
 
+  # Link files.
   home.file.".local/bin" = {
     source = ./scripts;
     recursive = true;
@@ -76,6 +62,7 @@
     source = ./backgrounds/nord-underwater.png;
   };
 
+  # Link config files.
   xdg.configFile."alacritty" = {
     source = ./alacritty;
     recursive = true;
