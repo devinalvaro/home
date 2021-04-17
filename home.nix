@@ -42,7 +42,6 @@
     bat
     exa
     fd
-    gitAndTools.delta
     ripgrep
     sd
     # Web:
