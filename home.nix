@@ -19,9 +19,10 @@
   home.username = "devin";
   home.homeDirectory = "/home/devin";
 
-  # Enable programs.
-  programs.git = import ./git;
+  # Configure programs.
+  programs.emacs = import ./emacs;
   programs.firefox = import ./firefox;
+  programs.git = import ./git;
 
   # Install packages.
   home.packages = with pkgs; [
@@ -29,7 +30,6 @@
     rofi
     xsecurelock
     # Development:
-    emacs
     neovim
     # Document:
     zathura
