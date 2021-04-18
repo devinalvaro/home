@@ -32,8 +32,6 @@
     rofi
     xbindkeys
     xsecurelock
-    # Development:
-    neovim
     # Document:
     zathura
     # Terminal:
@@ -47,6 +45,11 @@
     # Web:
     firefox
   ];
+
+  # Session variables.
+  home.sessionVariables = {
+    EDITOR = "emacs";
+  };
 
   # Session paths.
   home.sessionPath = [
