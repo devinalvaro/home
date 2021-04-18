@@ -4,6 +4,8 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      # Include information on LUKS devices.
+      ./luks-devices.nix
     ];
 
   # This value determines the NixOS release from which the default
