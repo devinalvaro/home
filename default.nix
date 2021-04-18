@@ -50,16 +50,12 @@
   ];
 
   # Link files.
+  home.file.".background-image" = {
+    source = ./backgrounds/nord-underwater.png;
+  };
   home.file.".local/bin" = {
     source = ./scripts;
     recursive = true;
-  };
-  home.file.".doom.d" = {
-    source = ./doom;
-    recursive = true;
-  };
-  home.file.".background-image" = {
-    source = ./backgrounds/nord-underwater.png;
   };
 
   # Link config files.
@@ -69,6 +65,10 @@
   };
   xdg.configFile."bat" = {
     source = ./bat;
+    recursive = true;
+  };
+  xdg.configFile."doom" = {
+    source = ./doom;
     recursive = true;
   };
   xdg.configFile."fish" = {
