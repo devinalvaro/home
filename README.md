@@ -4,6 +4,10 @@ Also known as dotfiles.
 
 ## Setup
 
+Sources:
+- [Home Manager Manual](https://nix-community.github.io/home-manager/index.html#sec-install-standalone)
+- [Doom Emacs](https://github.com/hlissner/doom-emacs#install)
+
 ### Installing Home Manager
 
 ```sh
