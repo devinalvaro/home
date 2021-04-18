@@ -54,6 +54,9 @@
   # Enable touchpad.
   services.xserver.libinput.enable = true;
 
+  # Make caps an additional escape.
+  services.xserver.xkbOptions = "caps:escape";
+
   # Enable light.
   programs.light.enable = true;
 
@@ -72,5 +75,4 @@
     shell = pkgs.fish;
     hashedPassword = "$6$LYWKF1QF0Gv6osFq$GGqSLkS5kSoutvmxNL3NpZfyHZz2lCV5kVJ2G3P.53bOaNOY9Gdf0gqQWtb7HSpYaX68PVuMQEcX/Ni7psnHW0";
   };
-
 }
