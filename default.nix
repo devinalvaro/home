@@ -20,30 +20,35 @@
   home.homeDirectory = "/home/devin";
 
   # Configure programs.
-  programs.emacs = import ./emacs;
-  programs.firefox = import ./firefox;
-  programs.fish = import ./fish;
-  programs.git = import ./git;
-  programs.starship = import ./starship;
+  programs = {
+    # Desktop:
+    rofi = import ./rofi;
+    # Development:
+    emacs = import ./emacs;
+    # Document:
+    zathura = import ./zathura;
+    # Shell:
+    fish = import ./fish;
+    starship = import ./starship;
+    # Terminal:
+    alacritty = import ./alacritty;
+    # Utilities:
+    bat = import ./bat;
+    git = import ./git;
+    # Web:
+    firefox = import ./firefox;
+  };
 
   # Install packages.
   home.packages = with pkgs; [
     # Desktop:
-    rofi
     xbindkeys
     xsecurelock
-    # Document:
-    zathura
-    # Terminal:
-    alacritty
     # Utilities:
-    bat
     exa
     fd
     ripgrep
     sd
-    # Web:
-    firefox
   ];
 
   # Session variables.
@@ -58,37 +63,25 @@
   ];
 
   # Link files.
-  home.file.".background-image" = {
-    source = ./backgrounds/nord-underwater.png;
-  };
-  home.file.".local/bin" = {
-    source = ./scripts;
-    recursive = true;
+  home.file = {
+    ".background-image" = {
+      source = ./backgrounds/nord-underwater.png;
+    };
+    ".local/bin" = {
+      source = ./scripts;
+      recursive = true;
+    };
   };
 
   # Link config files.
-  xdg.configFile."alacritty" = {
-    source = ./alacritty;
-    recursive = true;
-  };
-  xdg.configFile."bat" = {
-    source = ./bat;
-    recursive = true;
-  };
-  xdg.configFile."doom" = {
-    source = ./doom;
-    recursive = true;
-  };
-  xdg.configFile."rofi" = {
-    source = ./rofi;
-    recursive = true;
-  };
-  xdg.configFile."spectrwm" = {
-    source = ./spectrwm;
-    recursive = true;
-  };
-  xdg.configFile."zathura" = {
-    source = ./zathura;
-    recursive = true;
+  xdg.configFile = {
+    "doom" = {
+      source = ./doom;
+      recursive = true;
+    };
+    "spectrwm" = {
+      source = ./spectrwm;
+      recursive = true;
+    };
   };
 }
