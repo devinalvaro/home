@@ -22,7 +22,9 @@
   # Configure programs.
   programs.emacs = import ./emacs;
   programs.firefox = import ./firefox;
+  programs.fish = import ./fish;
   programs.git = import ./git;
+  programs.starship = import ./starship;
 
   # Install packages.
   home.packages = with pkgs; [
@@ -34,9 +36,6 @@
     neovim
     # Document:
     zathura
-    # Shell:
-    fish
-    starship
     # Terminal:
     alacritty
     # Utilities:
@@ -47,6 +46,12 @@
     sd
     # Web:
     firefox
+  ];
+
+  # Session paths.
+  home.sessionPath = [
+    "$HOME/.emacs.d/bin"
+    "$HOME/.local/bin"
   ];
 
   # Link files.
@@ -69,10 +74,6 @@
   };
   xdg.configFile."doom" = {
     source = ./doom;
-    recursive = true;
-  };
-  xdg.configFile."fish" = {
-    source = ./fish;
     recursive = true;
   };
   xdg.configFile."rofi" = {
