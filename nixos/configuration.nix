@@ -54,7 +54,7 @@
   # Enable touchpad.
   services.xserver.libinput.enable = true;
 
-  # Make caps an additional escape.
+  # Bind caps to escape.
   services.xserver.xkbOptions = "caps:escape";
 
   # Enable light.
@@ -72,7 +72,8 @@
     isNormalUser = true;
     description = "Devin Alvaro";
     extraGroups = [ "networkmanager" "video" "wheel" ];
-    shell = pkgs.fish;
     hashedPassword = "$6$LYWKF1QF0Gv6osFq$GGqSLkS5kSoutvmxNL3NpZfyHZz2lCV5kVJ2G3P.53bOaNOY9Gdf0gqQWtb7HSpYaX68PVuMQEcX/Ni7psnHW0";
+    shell = pkgs.fish;
+    packages = with pkgs; [ git ];
   };
 }
