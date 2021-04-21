@@ -20,6 +20,7 @@
   imports = [
     ./desktop
     ./editor
+    ./lang
     ./shell
   ];
 }
