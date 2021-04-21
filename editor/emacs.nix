@@ -4,9 +4,7 @@
     extraPackages = epkgs: [ epkgs.vterm ];
   };
 
-  home.sessionPath = [
-    "$HOME/.emacs.d/bin"
-  ];
+  home.sessionPath = [ "$HOME/.emacs.d/bin" ];
 
   xdg.configFile.doom = {
     source = ./emacs;

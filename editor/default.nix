@@ -3,7 +3,5 @@
     EDITOR = "emacs";
   };
 
-  imports = [
-    ./emacs.nix
-  ];
+  imports = [ ./emacs.nix ];
 }

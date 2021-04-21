@@ -1,12 +1,12 @@
 { pkgs, ... }:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-      # Include information on LUKS devices.
-      ./luks-devices.nix
-    ];
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+    # Include information on LUKS devices.
+    ./luks-devices.nix
+  ];
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
@@ -73,7 +73,11 @@
   users.users.devin = {
     isNormalUser = true;
     description = "Devin Alvaro";
-    extraGroups = [ "networkmanager" "video" "wheel" ];
+    extraGroups = [
+      "networkmanager"
+      "video"
+      "wheel"
+    ];
     hashedPassword = "$6$LYWKF1QF0Gv6osFq$GGqSLkS5kSoutvmxNL3NpZfyHZz2lCV5kVJ2G3P.53bOaNOY9Gdf0gqQWtb7HSpYaX68PVuMQEcX/Ni7psnHW0";
     shell = pkgs.fish;
     packages = with pkgs; [ git ];
