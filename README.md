@@ -17,11 +17,18 @@ nix-channel --add https://github.com/oxalica/rust-overlay/archive/master.tar.gz 
 nix-channel --update
 ```
 
+### Cloning Home
+
+``` sh
+mkdir -p ~/.config/nixpkgs
+git clone https://gitlab.com/devinalvaro/home ~/Codes/home
+ln -s ~/Codes/home/default.nix ~/.config/nixpkgs/home.nix
+```
+
 ### Installing Home Manager
 
 ```sh
-git clone https://gitlab.com/devinalvaro/home ~/Codes/home
-ln -sf ~/Codes/home/default.nix ~/.config/nixpkgs/home.nix
+set -x NIX_PATH "$HOME/.nix-defexpr/channels:$NIX_PATH"
 nix-shell '<home-manager>' -A install
 home-manager switch
 ```

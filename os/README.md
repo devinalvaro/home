@@ -13,7 +13,7 @@ Sources:
 ``` sh
 gdisk /dev/sda
 > o
-> n # default, default, +500M, ef00
+> n # default, default, +512M, ef00
 > n # default, default, default, 8e00
 > w
 ```
@@ -55,20 +55,18 @@ swapon /dev/vg/swap
 
 ```sh
 nixos-generate-config --root /mnt
-wget https://gitlab.com/devinalvaro/home/-/raw/master/nixos/configuration.nix -O /etc/nixos/configuration.nix
+wget https://gitlab.com/devinalvaro/home/-/raw/master/os/configuration.nix -O /mnt/etc/nixos/configuration.nix
 ```
 
 ### Adding luks-devices.nix
 
-Create `/etc/nixos/luks-devices.nix` containing:
+Create `/mnt/etc/nixos/luks-devices.nix` containing:
 
 ``` nix
-{ config, lib, pkgs, ... }:
-
 {
   boot.initrd.luks.devices = {
     root = {
-      device = "/dev/disk/by-uuid/fdd9add5-9a0b-4845-9ce9-9fca1c954d75";
+      device = "/dev/disk/by-uuid/<sda2-uuid>";
       preLVM = true;
       allowDiscards = true;
     };
@@ -76,10 +74,11 @@ Create `/etc/nixos/luks-devices.nix` containing:
 }
 ```
 
-where `boot.initrd.luks.devices.root.device`'s value is `/dev/sda2`'s UUID:
+where `<sda2-uuid>` is `/dev/sda2`'s UUID (use `blkid /dev/sda2`).
+
+### Installing NixOS
 
 ``` sh
-$ blkid /dev/sda2
-
-/dev/sda2: UUID="fdd9add5-9a0b-4845-9ce9-9fca1c954d75" TYPE="crypto_LUKS" PARTLABEL="Linux LVM" PARTUUID="fd45f14d-9cb5-4978-a620-d45ff4ec669a"
+nixos-install
+reboot
 ```
