@@ -5,6 +5,7 @@
     ./alacritty.nix
     ./backgrounds
     ./firefox.nix
+    ./gammastep.nix
     ./rofi
     ./spectrwm.nix
     ./zathura.nix
