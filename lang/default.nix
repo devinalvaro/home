@@ -1,3 +1,6 @@
 {
-  imports = [ ./rust.nix ];
+  imports = [
+    ./go.nix
+    ./rust.nix
+  ];
 }
