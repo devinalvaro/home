@@ -8,15 +8,16 @@ Sources:
 - [Home Manager Manual](https://nix-community.github.io/home-manager/index.html#sec-install-standalone)
 - [Doom Emacs](https://github.com/hlissner/doom-emacs#install)
 
-### Adding overlays
+### Adding Channels
 
 ``` sh
-sudo nix-channel --add https://github.com/nix-community/home-manager/archive/release-20.09.tar.gz home-manager
-sudo nix-channel --add https://github.com/oxalica/rust-overlay/archive/master.tar.gz rust-overlay
-sudo nix-channel --update
+nix-channel --add https://nixos.org/channels/nixpkgs-unstable nixpkgs
+nix-channel --add https://github.com/nix-community/home-manager/archive/master.tar.gz home-manager
+nix-channel --add https://github.com/oxalica/rust-overlay/archive/master.tar.gz rust-overlay
+nix-channel --update
 ```
 
-### Activating Home Manager
+### Installing Home Manager
 
 ```sh
 git clone https://gitlab.com/devinalvaro/home ~/Codes/home
