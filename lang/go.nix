@@ -3,7 +3,7 @@
 {
   programs.go = {
     enable = true;
-    goPath = "$HOME/.go";
+    goPath = ".go";
   };
 
   home.packages = with pkgs; [

@@ -1,10 +1,12 @@
+{ config, ... }:
+
 {
   programs.emacs = {
     enable = true;
     extraPackages = epkgs: [ epkgs.vterm ];
   };
 
-  home.sessionPath = [ "$HOME/.emacs.d/bin" ];
+  home.sessionPath = [ "${config.home.homeDirectory}/.emacs.d/bin" ];
 
   xdg.configFile.doom = {
     source = ./emacs;

@@ -1,6 +1,8 @@
+{ config, ... }:
+
 {
   home = {
-    sessionPath = [ "$HOME/.local/bin" ];
+    sessionPath = [ "${config.home.homeDirectory}/.local/bin" ];
     file.".local/bin" = {
       source = ./scripts;
       recursive = true;
