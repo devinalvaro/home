@@ -21,7 +21,7 @@ nix-channel --update
 
 ``` sh
 mkdir -p ~/.config/nixpkgs
-git clone https://gitlab.com/devinalvaro/home ~/Codes/home
+git clone https://github.com/devinalvaro/home ~/Codes/home
 ln -s ~/Codes/home/default.nix ~/.config/nixpkgs/home.nix
 ```
 
