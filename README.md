@@ -30,7 +30,6 @@ ln -s ~/Codes/home/default.nix ~/.config/nixpkgs/home.nix
 ```sh
 set -x NIX_PATH "$HOME/.nix-defexpr/channels:$NIX_PATH"
 nix-shell '<home-manager>' -A install
-home-manager switch
 ```
 
 ### Installing Doom Emacs

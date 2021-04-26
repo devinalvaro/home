@@ -55,7 +55,7 @@ swapon /dev/vg/swap
 
 ```sh
 nixos-generate-config --root /mnt
-wget https://github.com/devinalvaro/home/-/raw/master/os/configuration.nix -O /mnt/etc/nixos/configuration.nix
+wget https://github.com/devinalvaro/home/raw/master/os/configuration.nix -O /mnt/etc/nixos/configuration.nix
 ```
 
 ### Adding luks-devices.nix
