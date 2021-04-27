@@ -52,5 +52,9 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
+(setq +emacs-lisp-disable-flycheck-in-dirs '("~/.emacs.d"
+                                             "~/.config/doom"
+                                             "~/Codes/home/editor/emacs"))
+
 (after! evil-snipe
   (setq evil-snipe-scope 'visible))
