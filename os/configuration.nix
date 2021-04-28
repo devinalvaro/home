@@ -82,4 +82,11 @@
     shell = pkgs.fish;
     packages = with pkgs; [ git ];
   };
+
+  # Protect nix-shell against garbage collection.
+  # https://github.com/nix-community/nix-direnv/blob/master/README.md.
+  nix.extraOptions = ''
+    keep-outputs = true
+    keep-derivations = true
+  '';
 }
