@@ -61,4 +61,7 @@
 
 (add-hook! go-mode #'format-all-mode)
 
+(add-hook! lsp-mode
+  (defalias #'+lookup/references #'lsp-find-references))
+
 (add-hook! rustic-mode #'format-all-mode)
