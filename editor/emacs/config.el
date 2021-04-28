@@ -58,3 +58,7 @@
 
 (after! evil-snipe
   (setq evil-snipe-scope 'visible))
+
+(add-hook! go-mode #'format-all-mode)
+
+(add-hook! rustic-mode #'format-all-mode)
