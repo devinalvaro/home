@@ -10,7 +10,6 @@ in
     extraConfig = {
       # General:
       modi = "window,run";
-      disable-history = true;
       # Bindings:
       kb-remove-to-eol = ""; # Unbind Control+k.
       kb-accept-entry = "Control+m,Return,KP_Enter"; # Unbind Control+j.
