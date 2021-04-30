@@ -56,6 +56,9 @@
                                              "~/.config/doom"
                                              "~/Codes/home/editor/emacs"))
 
+(map! :mnv "-" #'dired-jump
+      :mnv "+" #'magit-status)
+
 (after! evil-snipe
   (setq evil-snipe-scope 'visible))
 
