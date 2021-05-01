@@ -56,6 +56,8 @@
                                              "~/.config/doom"
                                              "~/Codes/home/editor/emacs"))
 
+(setq org-roam-directory "~/.org-roam/")
+
 (map! :mnv "-" #'dired-jump
       :mnv "+" #'magit-status)
 
