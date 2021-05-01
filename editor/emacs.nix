@@ -14,6 +14,5 @@
 
   xdg.configFile.doom = {
     source = ./emacs;
-    recursive = true;
   };
 }
