@@ -28,7 +28,7 @@
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
-(setq org-directory "~/.org/")
+(setq org-directory "~/Dropbox/org/")
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
@@ -58,7 +58,7 @@
                                              "~/.config/doom"
                                              "~/Codes/home/editor/emacs"))
 
-(setq org-roam-directory "~/.org-roam/")
+(setq org-roam-directory "~/Dropbox/org-roam/")
 
 (map! :mnv "-" #'dired-jump
       :mnv "+" #'magit-status)
