@@ -61,7 +61,8 @@
 (setq org-roam-directory "~/Dropbox/org-roam/")
 
 (map! :mnv "-" #'dired-jump
-      :mnv "+" #'magit-status)
+      :mnv "+" #'magit-status
+      :i "C-d" #'delete-char)
 
 ;; Package Configurations
 
