@@ -52,6 +52,8 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
+;; Global Configurations
+
 (setq +emacs-lisp-disable-flycheck-in-dirs '("~/.emacs.d"
                                              "~/.config/doom"
                                              "~/Codes/home/editor/emacs"))
@@ -61,12 +63,18 @@
 (map! :mnv "-" #'dired-jump
       :mnv "+" #'magit-status)
 
+;; Package Configurations
+
 (after! evil-snipe
   (setq evil-snipe-scope 'visible))
 
+;; Major Mode Hooks
+
 (add-hook! go-mode #'format-all-mode)
+
+(add-hook! rustic-mode #'format-all-mode)
+
+;; Minor Mode Hooks
 
 (add-hook! lsp-mode
   (defalias #'+lookup/references #'lsp-find-references))
-
-(add-hook! rustic-mode #'format-all-mode)
