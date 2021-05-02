@@ -1,5 +1,3 @@
-{ pkgs, ... }:
-
 {
   imports = [
     ./alacritty.nix
@@ -10,10 +8,5 @@
     ./rofi
     ./spectrwm.nix
     ./zathura.nix
-  ];
-
-  home.packages = with pkgs; [
-    xbindkeys
-    xsecurelock
   ];
 }
