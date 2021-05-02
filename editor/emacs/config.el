@@ -60,6 +60,15 @@
 
 (setq org-roam-directory "~/Dropbox/org-roam/")
 
+(map! :leader
+      "o a" nil
+      "o A" nil)
+
+(map! :after org
+      :map org-mode-map
+      :localleader
+      "n" nil)
+
 (map! :mnv "-" #'dired-jump
       :mnv "+" #'magit-status
       :i "C-d" #'delete-char)
