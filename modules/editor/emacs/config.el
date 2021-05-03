@@ -56,7 +56,7 @@
 
 (setq +emacs-lisp-disable-flycheck-in-dirs '("~/.emacs.d"
                                              "~/.config/doom"
-                                             "~/Codes/home/editor/emacs"))
+                                             "~/Codes/home/modules/editor/emacs"))
 
 (setq org-roam-directory "~/Dropbox/org-roam/")
 
