@@ -7,7 +7,6 @@
   };
 
   home.packages = with pkgs; [
-    gccgo
     gopls
   ];
 }
