@@ -14,6 +14,5 @@
     fd
     ripgrep
     sd
-    topgrade
   ];
 }
