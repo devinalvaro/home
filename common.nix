@@ -17,8 +17,6 @@
   # Load scripts into .local/bin.
   home = {
     sessionPath = [ "${config.home.homeDirectory}/.local/bin" ];
-    file.".local/bin" = {
-      source = ./scripts;
-    };
+    file.".local/bin".source = ./scripts;
   };
 }

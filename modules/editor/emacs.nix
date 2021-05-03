@@ -19,7 +19,5 @@
     "emacs.MenuBar" = 0;
   };
 
-  xdg.configFile.doom = {
-    source = ./emacs;
-  };
+  xdg.configFile.doom.source = ./emacs;
 }

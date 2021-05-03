@@ -1,7 +1,5 @@
 {
-  home.sessionVariables = {
-    EDITOR = "emacs";
-  };
+  home.sessionVariables.EDITOR = "emacs";
 
   imports = [ ./emacs.nix ];
 }

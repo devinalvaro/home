@@ -1,5 +1,3 @@
 {
-  home.file.".background-image" = {
-    source = ./nord-underwater.png;
-  };
+  home.file.".background-image".source = ./nord-underwater.png;
 }

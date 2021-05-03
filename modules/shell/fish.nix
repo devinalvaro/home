@@ -50,7 +50,6 @@
       bind \cd delete-char
     '';
   };
-  programs.starship = {
-    enable = true;
-  };
+
+  programs.starship.enable = true;
 }

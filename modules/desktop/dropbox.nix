@@ -1,4 +1,4 @@
-{ config, lib, ... }:
+{ lib, ... }:
 
 {
   nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
@@ -7,7 +7,5 @@
     "firefox-release-bin-unwrapped"
   ];
 
-  services.dropbox = {
-    enable = true;
-  };
+  services.dropbox.enable = true;
 }
