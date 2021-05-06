@@ -13,9 +13,7 @@
     ./modules/shell
   ];
 
-  programs.emacs = {
-    package = pkgs.emacsMacport;
-  };
+  programs.emacs.package = pkgs.emacsMacport;
 
   programs.fish = {
     plugins = [
@@ -35,11 +33,7 @@
     '';
   };
 
-  programs.git = {
-    extraConfig = {
-      url = {
-        "ssh://gitlab@git.garena.com:2222/".insteadOf = "https://git.garena.com/";
-      };
-    };
-  };
+  programs.git.extraConfig.url."ssh://gitlab@git.garena.com:2222/".insteadOf = "https://git.garena.com/";
+
+  programs.go.goPrivate = [ "git.garena.com/*" ];
 }
