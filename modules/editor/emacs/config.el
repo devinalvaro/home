@@ -87,4 +87,6 @@
 ;; Minor Mode Hooks
 
 (add-hook! lsp-mode
-  (defalias #'+lookup/references #'lsp-find-references))
+  (defalias #'+lookup/references #'lsp-find-references)
+  (lsp-register-custom-settings
+   '(("gopls.experimentalWorkspaceModule" t t))))
