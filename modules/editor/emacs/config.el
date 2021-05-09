@@ -75,8 +75,17 @@
 
 ;; Package Configurations
 
-(after! evil-snipe
+(use-package! evil-snipe
+  :config
   (setq evil-snipe-scope 'visible))
+
+(use-package! org-roam
+  :config
+  (setq org-roam-capture-templates
+        '(("d" "default" plain #'org-roam-capture--get-point "%?"
+           :file-name "${slug}"
+           :head "#+title: ${title}\n"
+           :unnarrowed t))))
 
 ;; Major Mode Hooks
 
