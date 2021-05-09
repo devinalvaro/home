@@ -2,9 +2,6 @@
   programs.alacritty = {
     enable = true;
     settings = {
-      # Set font size.
-      font.size = 8;
-
       # Set Nord theme.
       colors = {
         primary = {

@@ -35,12 +35,6 @@
 
   # Enable X11.
   services.xserver.enable = true;
-  services.xserver.resolutions = [
-    {
-      x = 1600;
-      y = 900;
-    }
-  ];
 
   # Enable auto-login.
   services.xserver.displayManager.autoLogin.enable = true;
