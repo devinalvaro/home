@@ -60,6 +60,8 @@
 
 (setq org-roam-directory "~/Dropbox/org-roam/")
 
+(setq projectile-project-search-path '("~/Codes/"))
+
 (map! :leader
       "o a" nil
       "o A" nil)
