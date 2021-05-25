@@ -58,8 +58,6 @@
                                              "~/.config/doom"
                                              "~/Codes/home/modules/editor/emacs"))
 
-(setq org-roam-directory "~/Dropbox/org-roam/")
-
 (setq projectile-project-search-path '("~/Codes/"))
 
 (map! :leader
@@ -84,21 +82,16 @@
         '(("d" "default" plain #'org-roam-capture--get-point "%?"
            :file-name "${slug}"
            :head "#+title: ${title}\n"
-           :unnarrowed t))))
+           :unnarrowed t)))
+  (setq org-roam-directory "~/Dropbox/org-roam/"))
 
 ;; Major Mode Hooks
-
-;; Go
-(add-hook! go-mode #'format-all-mode)
 
 ;; Org
 (map! :after org
       :map org-mode-map
       :localleader
       "n" nil)
-
-;; Rust
-(add-hook! rustic-mode #'format-all-mode)
 
 ;; Minor Mode Hooks
 
