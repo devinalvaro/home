@@ -66,21 +66,18 @@
       "o a" nil
       "o A" nil)
 
-(map! :after org
-      :map org-mode-map
-      :localleader
-      "n" nil)
-
 (map! :mnv "-" #'dired-jump
       :mnv "+" #'magit-status
       :i "C-d" #'delete-char)
 
 ;; Package Configurations
 
+;; Evil-snipe
 (use-package! evil-snipe
   :config
   (setq evil-snipe-scope 'visible))
 
+;; Org-roam
 (use-package! org-roam
   :config
   (setq org-roam-capture-templates
@@ -91,13 +88,23 @@
 
 ;; Major Mode Hooks
 
+;; Go
 (add-hook! go-mode #'format-all-mode)
 
+;; Org
+(map! :after org
+      :map org-mode-map
+      :localleader
+      "n" nil)
+
+;; Rust
 (add-hook! rustic-mode #'format-all-mode)
 
 ;; Minor Mode Hooks
 
+;; LSP
 (add-hook! lsp-mode
   (defalias #'+lookup/references #'lsp-find-references)
+  (setq lsp-enable-symbol-highlighting nil)
   (lsp-register-custom-settings
    '(("gopls.experimentalWorkspaceModule" t t))))
