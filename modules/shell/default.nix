@@ -13,5 +13,6 @@
     fd
     ripgrep
     sd
+    wget
   ];
 }
