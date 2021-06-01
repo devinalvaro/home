@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ config, pkgs, ... }:
 
 {
   # Home Manager needs a bit of information about you and the
@@ -41,5 +41,9 @@
     in
       pkgs.go_1_12);
     goPrivate = [ "git.garena.com/*" ];
+  };
+
+  home.sessionVariables = {
+    SP_UNIX_SOCKET = "${config.home.homeDirectory}/.local/spex/spex.sock";
   };
 }
