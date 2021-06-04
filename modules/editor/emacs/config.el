@@ -58,6 +58,10 @@
                                              "~/.config/doom"
                                              "~/Codes/home/modules/editor/emacs"))
 
+(defadvice! fix-lookup-handlers (ret)
+  :filter-return '(+lsp-lookup-references-handler +lsp-lookup-definition-handler)
+  (when ret 'deferred))
+
 (setq projectile-project-search-path '("~/Codes/"))
 
 (map! :leader
@@ -97,7 +101,6 @@
 
 ;; LSP
 (add-hook! lsp-mode
-  (defalias #'+lookup/references #'lsp-find-references)
   (setq lsp-enable-symbol-highlighting nil)
   (lsp-register-custom-settings
    '(("gopls.experimentalWorkspaceModule" t t))))
