@@ -46,4 +46,9 @@
   home.sessionVariables = {
     SP_UNIX_SOCKET = "${config.home.homeDirectory}/.local/spex/spex.sock";
   };
+
+  home.packages = with pkgs; [
+    mysql
+    redis
+ ];
 }
