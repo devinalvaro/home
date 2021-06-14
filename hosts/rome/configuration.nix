@@ -40,27 +40,16 @@
   services.xserver.displayManager.autoLogin.enable = true;
   services.xserver.displayManager.autoLogin.user = "devin";
 
-  # Enable SpectrWM.
-  services.xserver.windowManager.spectrwm.enable = true;
+  # Enable Plasma 5.
+  services.xserver.desktopManager.plasma5.enable = true;
+  services.xserver.displayManager.sddm.enable = true;
 
   # Enable sound.
   sound.enable = true;
   hardware.pulseaudio.enable = true;
 
-  # Enable touchpad.
-  services.xserver.libinput.enable = true;
-
   # Bind caps to escape.
   services.xserver.xkbOptions = "caps:escape";
-
-  # Enable light.
-  programs.light.enable = true;
-
-  # Set fonts.
-  fonts.fonts = with pkgs; [ fira-code ];
-  fonts.fontconfig.defaultFonts = {
-    monospace = [ "Fira Code" ];
-  };
 
   # Define user accounts.
   users.mutableUsers = false;
@@ -68,8 +57,6 @@
     isNormalUser = true;
     description = "Devin Alvaro";
     extraGroups = [
-      "networkmanager"
-      "video"
       "wheel"
     ];
     hashedPassword = "$6$LYWKF1QF0Gv6osFq$GGqSLkS5kSoutvmxNL3NpZfyHZz2lCV5kVJ2G3P.53bOaNOY9Gdf0gqQWtb7HSpYaX68PVuMQEcX/Ni7psnHW0";
