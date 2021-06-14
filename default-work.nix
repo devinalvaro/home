@@ -18,19 +18,15 @@
   programs.fish = {
     plugins = [
       {
-        name = "bass";
+        name = "nix-env.fish";
         src = pkgs.fetchFromGitHub {
-          owner = "edc";
-          repo = "bass";
-          rev = "7aae6a85c24660422ea3f3f4629bb4a8d30df3ba";
-          sha256 = "03693ywczzr46dgpnbawcfv02v5l143dqlz1fzjbhpwwc2xpr42y";
+          owner = "lilyball";
+          repo = "nix-env.fish";
+          rev = "00c6cc762427efe08ac0bd0d1b1d12048d3ca727";
+          sha256 = "1hrl22dd0aaszdanhvddvqz3aq40jp9zi2zn0v1hjnf7fx4bgpma";
         };
       }
     ];
-    shellInit = ''
-      # Source nix.
-      bass source ~/.nix-profile/etc/profile.d/nix.sh
-    '';
   };
 
   programs.git.extraConfig.url."ssh://gitlab@git.garena.com:2222/".insteadOf = "https://git.garena.com/";
