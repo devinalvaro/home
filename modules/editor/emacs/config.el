@@ -62,6 +62,10 @@
   :filter-return '(+lsp-lookup-references-handler +lsp-lookup-definition-handler)
   (when ret 'deferred))
 
+(setq +format-on-save-enabled-modes
+      '(go-mode
+        rustic-mode))
+
 (setq projectile-project-search-path '("~/Codes/"))
 (setq projectile-track-known-projects-automatically nil)
 
