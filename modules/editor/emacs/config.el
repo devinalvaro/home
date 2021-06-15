@@ -63,6 +63,7 @@
   (when ret 'deferred))
 
 (setq projectile-project-search-path '("~/Codes/"))
+(setq projectile-track-known-projects-automatically nil)
 
 (map! :leader
       "o a" nil
