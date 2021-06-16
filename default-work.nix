@@ -40,6 +40,7 @@
   };
 
   home.sessionVariables = {
+    CC = "clang";
     SP_UNIX_SOCKET = "${config.home.homeDirectory}/.local/spex/spex.sock";
   };
 
