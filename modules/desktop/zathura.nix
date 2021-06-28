@@ -2,6 +2,9 @@
   programs.zathura = {
     enable = true;
     options = {
+      # Set clipboard.
+      selection-clipboard = "clipboard";
+
       # Set Nord theme.
       default-bg = "#2E3440";
       default-fg = "#3B4252";
@@ -21,7 +24,6 @@
       completion-fg = "#81A1C1";
       completion-highlight-fg = "#8FBCBB";
       completion-highlight-bg = "#81A1C1";
-
       # Inverse color.
       recolor = "true";
       recolor-keephue = "true";
