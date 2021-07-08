@@ -8,6 +8,7 @@
   ];
 
   home.packages = with pkgs; [
+    gcc
     (rust-bin.nightly.latest.default.override {
       extensions = [
         "rust-analyzer-preview"
