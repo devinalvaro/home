@@ -66,6 +66,7 @@
       '(go-mode
         rustic-mode))
 
+(setq projectile-auto-discover t)
 (setq projectile-project-search-path '("~/Codes/"))
 (setq projectile-track-known-projects-automatically nil)
 
