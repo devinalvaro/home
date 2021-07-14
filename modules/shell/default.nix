@@ -11,6 +11,7 @@
   home.packages = with pkgs; [
     exa
     fd
+    httpie
     ripgrep
     sd
     wget
