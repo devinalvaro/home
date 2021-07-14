@@ -93,7 +93,8 @@
            :file-name "${slug}"
            :head "#+title: ${title}\n"
            :unnarrowed t)))
-  (setq org-roam-directory "~/Dropbox/Notes/org-roam/"))
+  (setq org-roam-directory "~/Dropbox/Notes/org-roam/")
+  (setq +org-roam-open-buffer-on-find-file nil))
 
 ;; Major Mode Hooks
 
