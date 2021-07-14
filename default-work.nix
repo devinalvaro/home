@@ -31,13 +31,7 @@
 
   programs.git.extraConfig.url."ssh://gitlab@git.garena.com:2222/".insteadOf = "https://git.garena.com/";
 
-  programs.go = {
-    package = (let
-      pkgs = import (builtins.fetchTarball https://github.com/NixOS/nixpkgs/archive/2d9888f61c80f28b09d64f5e39d0ba02e3923057.tar.gz) {};
-    in
-      pkgs.go_1_12);
-    goPrivate = [ "git.garena.com/*" ];
-  };
+  programs.go.goPrivate = [ "git.garena.com/*" ];
 
   home.sessionVariables = {
     CC = "clang";
