@@ -14,6 +14,7 @@
     httpie
     ripgrep
     sd
+    unzip
     wget
   ];
 }
